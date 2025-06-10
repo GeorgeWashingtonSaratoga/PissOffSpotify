@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PissOffSpotify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+        margin: 0;
+         font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        background: linear-gradient(-45deg, #1c2c25, #2f7537, #34af2e, #8fdb0c);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        color: white;
+        padding: 50px 20px;
+        }
+
+        @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+        }
+        .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1.2s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+        h1#app_title {
+        font-size: 2.5em;
+        text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88;
+        }
+
+        .fade-in:nth-child(1) { animation-delay: 0.2s; }
+        .fade-in:nth-child(2) { animation-delay: 0.4s; }
+        .fade-in:nth-child(3) { animation-delay: 0.6s; }
+        .glass-panel {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 30px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        margin: 0 auto;
+        }
+
+
+    select { padding: 5px; margin: 10px; }
+    button { padding: 10px 20px; font-size: 16px; background: #0f0; color: #000; border: none; cursor: pointer; }
+    a.download { display: inline-block; margin-top: 20px; text-decoration: none; color: #0f0; font-weight: bold; }
+    button.download-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #00ff88;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+    transition: all 0.3s ease;
+    }
+
+    button.download-btn:hover {
+    background-color: #00cc6e;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 255, 136, 0.4);
+    }
+
+  </style>
+  <link rel="icon" type="image/webp" href="icon.webp">
+  
+</head>
+<body>
+    <div class="glass-panel fade-in">
+    
+    <h1 id="app_title" class="fade-in">PissOffSpotify</h1>
+    <p id="description" class="fade-in">Hello! Thank YOU for choosing PissOffSpotify over Spotify! We appreciate your support!</p>
+    <br>
+    <p class="fade-in">As we do not expect money in exchange for this wonderful app, we implore you to recommend this app to your fellow android users!!!</p>
+    <br>
+    <p class="fade-in">Regarding what kind of audio files you can use, please use only MP3s that have embedded pictures. 
+        While using MP3s that do not have embedded pictures still works, it causes extreme lag. We are currently working on a fix for this.
+        Your MP3s do not need any other metadata. </p>
+    <br>
+    <p class="fade-in">PissOffSpotify supports a variety of languages, being English, Spanish, Italian, French, German, Portuguese (Brazilian), Russian, 
+        Arabic, Hindi, Japanese, Korean, Turkish, Vietnamese, Indonesian, Ukrainian, Polish, Persian, Sicilian. 
+        Please note that aside from English, Spanish, and Italian, the translations were made using online tools. </p>
+
+    <br>
+
+    <a href="https://discord.gg/pmkD8vWF2x" id="joinLink" class="fade-in">Please join our discord!!!! You can report bugs, mistranslations, and suggestions!</a>
+
+    <br></br>
+    
+    <button class="download-btn" id="download_button" onclick="downloadApp()">Download APK</button>
+    </div>
+
+    <script>
+        function downloadApp() {
+        window.location.href = 'PissOffSpotify.apk';
+        }
+    </script>
+
+</body>
+</html>
